@@ -31,6 +31,5 @@ jobs:
           sshPublicKey: $(sshPublicKey)
           sshKeySecureFile: $(sshKeySecureFile)
       - script: |
-          cd $(Build.SourcesDirectory)/deployment
           echo '$(deployHost) ansible_user=ci host_name=$(deployHost)' >> hosts
           ansible-playbook -i hosts playbook.yml -vv
