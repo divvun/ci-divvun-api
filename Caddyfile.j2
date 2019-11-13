@@ -1,0 +1,9 @@
+{{ host_name }} {
+    proxy / divvun_api:8080 {
+        transparent
+    }
+}
+
+{{ host_name }}/msoffice {
+    root /app/msoffice
+}
