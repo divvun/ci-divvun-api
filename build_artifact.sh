@@ -17,7 +17,6 @@ cd $ROOT
 
 echo "copying configs"
 cp docker-compose.yml $DIST
-cp install.sh $DIST
 
 git clone --single-branch --branch develop --depth=1 https://github.com/divvun/divvun-api.git || (cd divvun-api && git pull && cd ..)
 docker build -t divvun/divvun-api divvun-api

@@ -1,8 +1,11 @@
 # Deployment to API Server
 
-In this folder (deployment) adjust paths to installation folder in divvun-api.server, then run `./build_artifact.sh` and transfer the resulting dist.tar.gz to the deployment server.
+In this folder (deployment) adjust paths to installation folder in divvun-api.server, then run `./build_artifact.sh`.
 
-Extract the archive on the server, run `sudo install.sh` and enable/start the divvun-api systemd service.
+Create a hosts file with the contents of the server the package should be deployed to, for example:
+api-giellalt.uit.no ansible_user=ci host_name=api-giellalt.uit.no
+
+Then run `ansible-playbook -i hosts playbook.yml -vv` in this folder.
 
 # Downloading Speller & Grammar Archives
 
