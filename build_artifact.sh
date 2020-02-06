@@ -19,7 +19,7 @@ echo "copying configs"
 cp docker-compose.yml $DIST
 
 git clone --single-branch --branch develop --depth=1 https://github.com/divvun/divvun-api.git || (cd divvun-api && git pull && cd ..)
-docker build -t divvun/divvun-api divvun-api
+docker build --no-cache -t divvun/divvun-api divvun-api
 docker save divvun/divvun-api | gzip > $DIST/divvun-api.tar.gz
 
 pushd $DIST
