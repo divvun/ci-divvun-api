@@ -3,7 +3,7 @@ git clone https://github.com/divvun/divvun-ci-config || true
 cd divvun-ci-config
 
 sh ./repo/scripts/download_speller.sh https://apertium.projectjj.com/apt/nightly/pool/main/g/giella-sme/ usr/share/voikko/4/se.zcheck se.zcheck
-sh ./repo/scripts/download_speller.sh https://apertium.projectjj.com/apt/nightly/pool/main/g/giella-sme/ usr/share/giella/mobilespellers/sme-mobile.zhfst sme.zhfst
+sh ./repo/scripts/download_speller.sh https://apertium.projectjj.com/apt/nightly/pool/main/g/giella-sme/ usr/share/giella/mobilespellers/se-mobile.zhfst se.zhfst
 
 sh ./repo/scripts/download_speller.sh https://apertium.projectjj.com/apt/nightly/pool/main/g/giella-sma/ usr/share/voikko/4/sma.zcheck sma.zcheck
 sh ./repo/scripts/download_speller.sh https://apertium.projectjj.com/apt/nightly/pool/main/g/giella-sma/ usr/share/giella/mobilespellers/sma-mobile.zhfst sma.zhfst
